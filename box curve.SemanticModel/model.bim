@@ -1,0 +1,2311 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"public vw_match_summary\",\"public vw_tournament_statistics\",\"public vw_player_statistics\",\"public vw_team_statistics\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "57c9cad2-a60d-4b93-8cbe-dbc0d75b0254",
+        "fromColumn": "start_date",
+        "fromTable": "public vw_tournament_statistics",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_48382587-06ba-4d9d-b925-2195cc13aa14"
+      },
+      {
+        "name": "43d12ebf-9589-44fa-a6e4-ea2649b71b42",
+        "fromColumn": "end_date",
+        "fromTable": "public vw_tournament_statistics",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_01eb5df7-855d-42b9-930f-1ba244e10708"
+      },
+      {
+        "name": "e289a269-63ca-4d5a-b3f9-4416592e54c5",
+        "fromColumn": "birth_date",
+        "fromTable": "public vw_player_statistics",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_27601e08-0085-4cdb-8afa-bbc47f14fd7b"
+      },
+      {
+        "name": "AutoDetected_465fbbab-a2c9-494c-878a-13dd54edbfb7",
+        "fromColumn": "tournament_id",
+        "fromTable": "public vw_match_summary",
+        "toColumn": "tournament_id",
+        "toTable": "public vw_tournament_statistics"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "public vw_match_summary",
+        "columns": [
+          {
+            "name": "match_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "907a18b5-2ab1-44b7-81d0-50e1a91dac79",
+            "sourceColumn": "match_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tournament_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "69fbf0c9-4893-4773-bbb1-2f688aa21663",
+            "sourceColumn": "tournament_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tournament_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0129d4e7-0c0f-4c11-a05a-381d6cc7c3d3",
+            "sourceColumn": "tournament_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a613d7e1-b99d-42b6-9306-a6504614c1c1",
+            "sourceColumn": "year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "match_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "53ffaf33-67a8-4baa-bc37-e6776ed8f05c",
+            "sourceColumn": "match_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "stage_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "71b767e1-2de6-42e1-8d1e-9fd260605fc2",
+            "sourceColumn": "stage_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "group_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "842b999a-a7f4-4ab6-8bb0-c6d4b47fc2a8",
+            "sourceColumn": "group_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "group_stage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "a5e7d6e2-ba04-4bb4-93e3-24a07fdd3e6e",
+            "sourceColumn": "group_stage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "knockout_stage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "c238b5ba-87bf-482c-a06e-37e71b79d9a8",
+            "sourceColumn": "knockout_stage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "replayed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "b447be19-571d-475e-87cd-7a7aa5d72eb1",
+            "sourceColumn": "replayed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "92600853-096d-4ba8-b0b7-c4c5e3cbe040",
+            "sourceColumn": "total_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "own_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "95209560-0e03-4fce-be1f-0f8c6e049c1c",
+            "sourceColumn": "own_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "penalty_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "343b6ab1-aad9-4104-8622-453ea3ac0a70",
+            "sourceColumn": "penalty_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_bookings",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7a4a3030-bfaa-463e-a645-a3a77df9a02e",
+            "sourceColumn": "total_bookings",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "31f24803-b884-4052-95dd-661bd8c2c6bd",
+            "sourceColumn": "yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "red_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9b9e8aa2-bb46-4d17-a6da-661aea855a3f",
+            "sourceColumn": "red_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "second_yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3cac854d-a903-4b22-abba-d9f3645c6b31",
+            "sourceColumn": "second_yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "sending_offs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "06db5da5-375d-49da-bd47-f970073d9f9f",
+            "sourceColumn": "sending_offs",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "89b1e852-4756-4ff6-a66c-066ef448abe8",
+        "measures": [
+          {
+            "name": "Total Tournaments",
+            "expression": [
+              "",
+              "DISTINCTCOUNT('public vw_tournament_statistics'[tournament_id])"
+            ],
+            "formatString": "0",
+            "lineageTag": "fe9b29d9-3a84-45df-a391-5c1738cdf616"
+          },
+          {
+            "name": "Avg Goals Per Match",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "AVERAGE('public vw_tournament_statistics'[goals_per_match])"
+            ],
+            "lineageTag": "9bff74ef-a220-4b28-985d-d01c485dd6b3"
+          },
+          {
+            "name": "Top Scorer Name",
+            "expression": [
+              "",
+              "MAXX(",
+              "    TOPN(",
+              "        1,",
+              "        'public vw_player_statistics',",
+              "        [goals_scored],",
+              "        DESC",
+              "    ),",
+              "    [player_name]",
+              ")"
+            ],
+            "lineageTag": "95e701f1-2f11-46d4-a585-d259a995144b"
+          },
+          {
+            "name": "Most Titles",
+            "expression": [
+              "",
+              "MAX('public vw_team_statistics'[tournament_wins])"
+            ],
+            "formatString": "0",
+            "lineageTag": "0c7557f0-98b9-4cb8-996a-59ff4281febe"
+          },
+          {
+            "name": "Most Tournaments",
+            "expression": "MAX('public vw_player_statistics'[count_tournaments])",
+            "formatString": "0",
+            "lineageTag": "c5e1dec0-1a5b-445f-9142-c8103f55cf7a"
+          },
+          {
+            "name": "Win Percentage",
+            "lineageTag": "b59a6165-9f3f-45d4-ae15-5316e3e361df"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "public vw_match_summary",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(\"localhost:5432\", \"fifa_worldcup\"),",
+                "    public_vw_match_summary = Source{[Schema=\"public\",Item=\"vw_match_summary\"]}[Data]",
+                "in",
+                "    public_vw_match_summary"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "public vw_tournament_statistics",
+        "columns": [
+          {
+            "name": "tournament_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "88b02646-0921-4d77-8818-d535364f5fdb",
+            "sourceColumn": "tournament_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "tournament_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3563824b-6e0f-44ad-87c4-6c435362e653",
+            "sourceColumn": "tournament_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "25dc39bb-e53f-4768-ab19-bbea1d8fadbe",
+            "sourceColumn": "year",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "start_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "3c1b2404-3c12-4f86-b2fc-4341e2832db7",
+            "sourceColumn": "start_date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_48382587-06ba-4d9d-b925-2195cc13aa14"
+                },
+                "isDefault": true,
+                "relationship": "57c9cad2-a60d-4b93-8cbe-dbc0d75b0254"
+              }
+            ]
+          },
+          {
+            "name": "end_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "9de0efe0-3679-41ec-a350-d490bbaf4026",
+            "sourceColumn": "end_date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_01eb5df7-855d-42b9-930f-1ba244e10708"
+                },
+                "isDefault": true,
+                "relationship": "43d12ebf-9589-44fa-a6e4-ea2649b71b42"
+              }
+            ]
+          },
+          {
+            "name": "host_country",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "28d9701c-7ff7-4cc7-b02c-56ac962ab83e",
+            "sourceColumn": "host_country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "winner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "401b6fdc-25c3-4551-903d-474ccac7ef4a",
+            "sourceColumn": "winner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "host_won",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "af05643b-af8d-4623-806b-e4d542e9e9f9",
+            "sourceColumn": "host_won",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "count_teams",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "7c0477b8-59e6-40ef-ad79-1e70ca4dd6ab",
+            "sourceColumn": "count_teams",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "group_stage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ad40db26-ebfc-429d-96bd-4f05631b28bd",
+            "sourceColumn": "group_stage",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "second_group_stage",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "de10302b-678e-4932-a611-39925307a17b",
+            "sourceColumn": "second_group_stage",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "final_round",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "1c1a2f39-b4a5-4655-8aad-58f9564d745f",
+            "sourceColumn": "final_round",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "round_of_16",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "801ab6b6-9b11-48d6-a961-7921ea9cc3c4",
+            "sourceColumn": "round_of_16",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "quarter_finals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "5ac65da4-71f9-4ac9-a839-934b4b6cdf1b",
+            "sourceColumn": "quarter_finals",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "semi_finals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "72a9f73c-9372-4fb8-a5c4-0cbedacbb493",
+            "sourceColumn": "semi_finals",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "third_place_match",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "d7893937-0a57-4efd-82b8-18fb55d3f30a",
+            "sourceColumn": "third_place_match",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "final",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "e7f36f12-6bde-4706-b980-ff096cabd75f",
+            "sourceColumn": "final",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "match_count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5ee1f2d2-58bd-413a-80cc-3407ae93b657",
+            "sourceColumn": "match_count",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "group_stage_matches",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "57aa8958-6525-4957-a211-6e01286e6cc7",
+            "sourceColumn": "group_stage_matches",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "knockout_stage_matches",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "611445a2-24f4-408e-811a-f8d17b1f6575",
+            "sourceColumn": "knockout_stage_matches",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "replayed_matches",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f66252ff-83e1-4238-ab75-19bcd3bb25af",
+            "sourceColumn": "replayed_matches",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b76a8d69-2d73-4b75-b614-79f8ea80ea07",
+            "sourceColumn": "total_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "own_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ad27b544-7a7a-4d15-9424-74a30c182b12",
+            "sourceColumn": "own_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "penalty_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a411d9e0-1801-4586-a0e0-131024c32697",
+            "sourceColumn": "penalty_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "goals_per_match",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "4a26878e-1e8b-42cd-9f8f-2d364b84f14f",
+            "sourceColumn": "goals_per_match",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_bookings",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b959a930-8220-4af2-964c-b1bb6a07c9b6",
+            "sourceColumn": "total_bookings",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ab831abe-8642-4ef2-9c3d-26d127f357c6",
+            "sourceColumn": "yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "red_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d3d5314d-eb01-492f-a275-778f2becc4e3",
+            "sourceColumn": "red_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "second_yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a3254a3e-1f94-4649-8d13-abe7fae2b7cb",
+            "sourceColumn": "second_yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "sending_offs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8c15a43c-aad0-4a84-8b19-8701e3008976",
+            "sourceColumn": "sending_offs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "teams_ranked",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "20b71ef0-96d9-47b1-af8a-c99f1c56a931",
+            "sourceColumn": "teams_ranked",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "beaf7c62-2662-4bcf-a890-aa0d9756c03b",
+        "partitions": [
+          {
+            "name": "public vw_tournament_statistics",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(\"localhost:5432\", \"fifa_worldcup\"),",
+                "    public_vw_tournament_statistics = Source{[Schema=\"public\",Item=\"vw_tournament_statistics\"]}[Data]",
+                "in",
+                "    public_vw_tournament_statistics"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_f57f3a08-72da-469f-b3d2-845d1ab1f185",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "767f2787-5076-4261-85a9-5ffbf7a5a94d",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "bb624660-8d92-4bdf-82e0-ab56d85ec2b6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "fb168285-bc28-49af-bbef-da6b9768083e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "41801757-36e8-4067-9ad5-3a82d9620eb6",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "6d2e31ab-cc29-4024-a140-cf0b233b1730",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "acda2afa-08d0-4f0e-8c80-25f65dec06d2",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "3c452211-169e-417a-bba8-900500c400e5",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "0b71a861-7dc5-4c5f-9d40-860b1b9ba047",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "94724259-0165-43fc-906f-ee1136e3b365",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "3f311580-4f3c-40fe-b7ba-4c939a133416",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "ede55fdb-ebe9-4b46-a6f2-ddae3786848c",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "3f6e3d51-27e7-441c-86e1-4f56e8f94f33"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "e6144f26-9bc4-4afb-a68e-f22d17c78064",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_f57f3a08-72da-469f-b3d2-845d1ab1f185",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_48382587-06ba-4d9d-b925-2195cc13aa14",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "307bde6a-2b53-4adb-82e3-53849385ad8a",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "7c5c7c47-eb30-44e2-99f3-3dd35524a9d4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "d0c03511-dd5d-49f4-8be4-40e6637ec7ec",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "bf0e9c4b-840b-4ecd-ae3d-369d1183a47c",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "4c19a2dc-837f-4264-8729-3d957519a107",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "a602382d-93de-43e4-be7f-4cd27caac3ff",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "b1d7a05a-ce9c-43bc-b5fc-73e3777463d8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "e63572c2-9dcf-418f-8ea8-030872880543",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "763e7aad-7361-4380-9769-251eff025af3",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "1e5e20c2-79f2-49d0-a0ef-4003bea2f90a",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "bd7401dd-fb3d-42e9-a5b4-bf04c80cd5e2",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "0ceb4c6a-6c01-437b-a7d7-e0c1d56f658b"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "1cd06369-6d9c-46b2-898d-0118eba6078e",
+        "partitions": [
+          {
+            "name": "LocalDateTable_48382587-06ba-4d9d-b925-2195cc13aa14",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('public vw_tournament_statistics'[start_date])), 1, 1), Date(Year(MAX('public vw_tournament_statistics'[start_date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "LocalDateTable_01eb5df7-855d-42b9-930f-1ba244e10708",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "dbc82e1e-2ce4-42ea-9ad1-a04a1bb6acea",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "f4844797-f161-4c1f-9fbb-abc7712434b3",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "237e35ac-2015-431f-86dc-0bbe87534655",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "4b53f784-5f38-4abe-ae9a-aaa3e7290d01",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "dc84e19d-1fdb-44ef-8082-0ee24f8e767f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "bbd8f3d4-ee4c-4977-87f7-fdb134844bf7",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "87e5382a-a433-4588-8d43-257fc740091c",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "9c20edb0-eff3-48bc-820d-83bdd1e6ec8c",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "daafb9bf-fa73-46d6-87d3-bd6d05fb6fdf",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "f0cd6d8e-0918-4887-9ec4-0eadce136cee",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "cd56b1c4-24e5-43a7-b674-a966c5cb0097",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "420eaae5-2968-4a70-8229-e9da50bb81d8"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "19400812-bec8-4788-91e9-7dceb5c05791",
+        "partitions": [
+          {
+            "name": "LocalDateTable_01eb5df7-855d-42b9-930f-1ba244e10708",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('public vw_tournament_statistics'[end_date])), 1, 1), Date(Year(MAX('public vw_tournament_statistics'[end_date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "public vw_player_statistics",
+        "columns": [
+          {
+            "name": "player_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aacb1f62-58cd-416c-b2a9-54e77103cfb0",
+            "sourceColumn": "player_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "family_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d39ca34f-8b0e-4b46-b5bd-e704b8f795ba",
+            "sourceColumn": "family_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "given_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "24d6d8f6-5238-4182-933b-2c68d0f25cc5",
+            "sourceColumn": "given_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "player_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b14d6f4a-9e84-4007-81ae-94a17f5ae1d8",
+            "sourceColumn": "player_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "birth_date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "ea0bd376-2cad-4dca-83c2-bcf1844fd730",
+            "sourceColumn": "birth_date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_27601e08-0085-4cdb-8afa-bbc47f14fd7b"
+                },
+                "isDefault": true,
+                "relationship": "e289a269-63ca-4d5a-b3f9-4416592e54c5"
+              }
+            ]
+          },
+          {
+            "name": "goal_keeper",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "25fae71c-fcee-4650-b44a-9d26dce4b89a",
+            "sourceColumn": "goal_keeper",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "defender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "2e1711f4-0de3-4565-af81-93777993ed0b",
+            "sourceColumn": "defender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "midfielder",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "b06aee38-f05e-462e-9c67-8fb6c223d61b",
+            "sourceColumn": "midfielder",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "forward",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "1528ada6-8d90-4815-819c-14e618576b23",
+            "sourceColumn": "forward",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "count_tournaments",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "345d4843-6965-4b0c-82da-2e9fb723cd3c",
+            "sourceColumn": "count_tournaments",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "goals_scored",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "691165c7-5093-4edc-964e-f477ccfad9d1",
+            "sourceColumn": "goals_scored",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "own_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a6c0e750-a800-43da-830e-463ed636e996",
+            "sourceColumn": "own_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "penalty_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "65ae64f8-6c97-4e12-88bf-20b1e25e539e",
+            "sourceColumn": "penalty_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_bookings",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9b4502b3-4a78-4cfa-8b0b-47ef214f7a43",
+            "sourceColumn": "total_bookings",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "55195f2c-cdd1-4937-a4c6-bf78a57ed6f9",
+            "sourceColumn": "yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "red_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "94c9b627-2773-473a-93dd-f57e752594b4",
+            "sourceColumn": "red_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "second_yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b09d18ab-bc22-462c-a9dd-f67c67f6a15f",
+            "sourceColumn": "second_yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "sending_offs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "304bc0a6-11a2-4bf7-8f99-f222cc7b6534",
+            "sourceColumn": "sending_offs",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "6c13061e-c7a0-4960-b385-af99f95280af",
+        "partitions": [
+          {
+            "name": "public vw_player_statistics",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(\"localhost:5432\", \"fifa_worldcup\"),",
+                "    public_vw_player_statistics = Source{[Schema=\"public\",Item=\"vw_player_statistics\"]}[Data]",
+                "in",
+                "    public_vw_player_statistics"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_27601e08-0085-4cdb-8afa-bbc47f14fd7b",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "c920417c-ee46-495c-a6b2-b907846873cd",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "b174b3aa-c7b4-4a7c-b993-402b2e0d25d2",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "1b58710e-a286-4280-9347-b61f1b77285d",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "8581537b-c284-4a11-b01a-beb409d714b0",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "ef92d02d-0794-4867-b0fe-afd721229db6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "0c21bd03-c9c9-43d3-bad2-b71e33f43b71",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "53e3666e-1d36-45b4-8ac0-71219b1897e8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "e7b5e776-a322-4805-bcba-f62b8b95cc40",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "6782e82f-2ba3-49ce-b4f2-cd710ac26bed",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "6c74575c-f7c5-4b33-8fef-eeac96648639",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "0bedc3f4-5cdc-4ad4-80bb-c124d7cc4e22",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "a70f762f-f253-4624-818e-d2d33cb47703"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "00a1f211-b20d-4f74-8558-f1a0c31052cc",
+        "partitions": [
+          {
+            "name": "LocalDateTable_27601e08-0085-4cdb-8afa-bbc47f14fd7b",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('public vw_player_statistics'[birth_date])), 1, 1), Date(Year(MAX('public vw_player_statistics'[birth_date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "public vw_team_statistics",
+        "columns": [
+          {
+            "name": "team_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "895ccb4a-0ec5-4a80-a511-4a1c1cd43fb9",
+            "sourceColumn": "team_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "team_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "66bef5da-a376-44d5-b7c3-f65988fd47dd",
+            "sourceColumn": "team_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "team_code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4eaf2c5f-a767-4ba5-bcce-0f9440e7ef51",
+            "sourceColumn": "team_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "federation_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5cf774d3-f466-451b-971a-13a0ecc62e22",
+            "sourceColumn": "federation_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "region_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dd05b1a6-9ddf-4b6a-9af7-d5a95c8654c2",
+            "sourceColumn": "region_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "confederation_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8cc2b76b-1273-400e-b6a0-f9daedd05b36",
+            "sourceColumn": "confederation_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "confederation_name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3bf4c1a4-e59d-4ea3-aa9e-08a371138422",
+            "sourceColumn": "confederation_name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "confederation_code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9957c100-dec7-4e86-9cf1-2074499d4e3f",
+            "sourceColumn": "confederation_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "goals_scored",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e892440f-20b8-4f45-8b12-9e7453d5ce6f",
+            "sourceColumn": "goals_scored",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "own_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "b0ad3e65-9d4a-4b2a-8ded-08171c492d8e",
+            "sourceColumn": "own_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "penalty_goals",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a1e4c9a0-7756-4e5e-965c-1f0434ebb8ba",
+            "sourceColumn": "penalty_goals",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_bookings",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a44b022e-b549-4d27-9d0f-391b2519a028",
+            "sourceColumn": "total_bookings",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "53b8d2aa-6a60-490e-b7ab-365dac9a881e",
+            "sourceColumn": "yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "red_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9c8f2106-74ee-49d5-a6e6-73bea576e001",
+            "sourceColumn": "red_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "second_yellow_cards",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "39580f54-2592-4fce-bc8f-25c04cc44330",
+            "sourceColumn": "second_yellow_cards",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "sending_offs",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "17ac1d9f-7e75-430a-bdf9-cad0875596e7",
+            "sourceColumn": "sending_offs",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tournament_entries",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "914a481f-1773-47f6-805b-a5a547bdb3fa",
+            "sourceColumn": "tournament_entries",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "best_finish",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "55f7d40f-481e-4953-a3ba-12eb5094157e",
+            "sourceColumn": "best_finish",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "avg_finish_position",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "965d491b-6027-44ae-bef0-0d343a780a3a",
+            "sourceColumn": "avg_finish_position",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tournament_wins",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eb3eef71-8dbe-481e-8022-47740e8b99d9",
+            "sourceColumn": "tournament_wins",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "top_four_finishes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "fcd46477-8b23-45ec-b933-b8ad18bd9d8e",
+            "sourceColumn": "top_four_finishes",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "e824e0be-0b2d-41f0-9f0e-d6c21af8ca58",
+        "partitions": [
+          {
+            "name": "public vw_team_statistics",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = PostgreSQL.Database(\"localhost:5432\", \"fifa_worldcup\"),",
+                "    public_vw_team_statistics = Source{[Schema=\"public\",Item=\"vw_team_statistics\"]}[Data]",
+                "in",
+                "    public_vw_team_statistics"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

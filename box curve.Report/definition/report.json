@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "box-curve",
+      "reportVersionAtImport": {
+        "visual": "1.8.39",
+        "report": "2.0.39",
+        "page": "1.3.39"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "box-curve.json",
+      "reportVersionAtImport": {
+        "visual": "1.8.40",
+        "report": "2.0.40",
+        "page": "1.3.40"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "box-curve",
+          "path": "BaseThemes/box-curve.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "box-curve.json",
+          "path": "box-curve.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "ChatGPT_Image_Aug_10,_2026,_128168793960920877.png",
+          "path": "ChatGPT_Image_Aug_10,_2026,_128168793960920877.png",
+          "type": "Image"
+        },
+        {
+          "name": "images__3_-removebg-preview14484466807814056.png",
+          "path": "images__3_-removebg-preview14484466807814056.png",
+          "type": "Image"
+        },
+        {
+          "name": "imagesbrazil7114551663237824.jpg",
+          "path": "imagesbrazil7114551663237824.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "Miroslav_Klose-removebg-previe17147546503683997.png",
+          "path": "Miroslav_Klose-removebg-previe17147546503683997.png",
+          "type": "Image"
+        },
+        {
+          "name": "page2.svg",
+          "path": "page2.svg",
+          "type": "Image"
+        },
+        {
+          "name": "page5.svg",
+          "path": "page5.svg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultFilterActionIsDataFilter": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

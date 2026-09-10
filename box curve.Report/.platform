@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "box curve"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1157a818-178e-46a8-8247-99cb31263698"
+  }
+}

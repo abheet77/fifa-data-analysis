@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "box curve"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "66cd0e0b-72c8-40cc-b429-4e674a4ae0d8"
+  }
+}
